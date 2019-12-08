@@ -21,7 +21,6 @@ export class LaunchFacadeService {
   ) {}
 
   pastLaunchListStoreCache() {
-    console.log("im here!");
     this.store.dispatch(loadLaunchList());
     return this.launchList$;
   }
