@@ -5,3 +5,31 @@
   grid-template-columns: repeat(auto-fill, 300px);
   justify-content: center;
 }
+
+.header {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.content {
+  padding: 0 50px;
+  display: flex;
+}
+
+.content mat-card {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.slick-prev:before {
+  color: #0c0c0c !important;
+}
+
+.slick-image {
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+}

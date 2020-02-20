@@ -35,6 +35,7 @@
     "graphql": "^14.5.5",
     "graphql-tag": "^2.10.1",
     "hammerjs": "^2.0.8",
+    "ngx-slickjs": "^1.5.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
