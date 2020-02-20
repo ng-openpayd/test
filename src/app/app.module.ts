@@ -14,13 +14,15 @@ import { RelativeTimePipe } from "./core/helpers/pipes/relative-time/relative-ti
 import { StoreModule } from "@ngrx/store";
 import { EffectsModule } from "@ngrx/effects";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import { DifferenceInDaysPipe } from './difference-in-days.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LaunchListComponent,
     LaunchDetailsComponent,
-    RelativeTimePipe
+    RelativeTimePipe,
+    DifferenceInDaysPipe
   ],
   imports: [
     BrowserModule,

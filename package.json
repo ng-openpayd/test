@@ -30,6 +30,8 @@
     "apollo-cache-inmemory": "^1.6.3",
     "apollo-client": "^2.6.4",
     "apollo-link": "^1.2.13",
+    "date-fns": "^2.9.0",
+    "g": "^2.0.1",
     "graphql": "^14.5.5",
     "graphql-tag": "^2.10.1",
     "hammerjs": "^2.0.8",
@@ -39,7 +41,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.4",
-    "@angular/cli": "~8.3.4",
+    "@angular/cli": "^8.3.25",
     "@angular/compiler-cli": "~8.2.5",
     "@angular/language-service": "~8.2.5",
     "@graphql-codegen/cli": "^1.7.0",
