@@ -13,9 +13,9 @@ export class DifferenceInDaysPipe implements PipeTransform {
     );
     const dif = differenceInDays(parse(today, 'mm/dd/yyyy', new Date()), parse(format(parseISO(value), 'mm/dd/yyyy'), 'mm/dd/yyyy', new Date()));
     if (dif > 1) {
-      return dif + 'days ago';
+      return dif + ' days ago';
     } else if (dif === 1) {
-      return dif + 'day ago';
+      return dif + ' day ago';
     } else {
       return 'today';
     }
