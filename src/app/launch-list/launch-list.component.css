@@ -9,3 +9,9 @@
 .mat-card {
   cursor: pointer;
 }
+.card-image {
+  display:none;
+}
+.image-loaded + .loading-spinner {
+  display: none;
+}
