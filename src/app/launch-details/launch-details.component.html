@@ -1,29 +1,38 @@
 <ng-container *ngIf="launchDetails$ | async as launchDetails">
-  <section style="padding-top: 20px;">
-    <mat-card style="width: 400px; margin: auto;">
-      <mat-card-header>
-        <mat-card-title>{{ launchDetails.mission_name }}</mat-card-title>
-      </mat-card-header>
-      <img
-        height="256"
-        width="256"
-        mat-card-image
-        [src]="launchDetails.links.mission_patch"
-        alt="Mission patch of {{ launchDetails.mission_name }}"
-      />
-      <mat-card-content>
-        <p>{{ launchDetails.details }}</p>
-      </mat-card-content>
-    </mat-card>
-  </section>
-  <section class="photo-grid">
-    <img
-      *ngFor="let pic of launchDetails.links.flickr_images"
-      [src]="pic"
-      alt="Picture of {{ launchDetails.mission_name }}"
-      height="300"
-      width="300"
-      loading="lazy"
-    />
-  </section>
+  <mat-grid-list cols="7" rowHeight="100%">
+    <mat-grid-tile [colspan]="1" ></mat-grid-tile>
+    <mat-grid-tile [colspan]="2" >
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>{{ launchDetails.mission_name }}</mat-card-title>
+        </mat-card-header>
+        
+        <mat-card-content><img
+          appUiImageLoaded
+          width="240"
+          height="240"
+          mat-card-image
+          [src]="launchDetails.links.mission_patch"
+          alt="Mission patch of {{ launchDetails.mission_name }}"
+          class="card-image"
+          loading="lazy"
+          onErrorSrc="assets/images/placeHolder.png"
+          loaderSrc="assets/images/loading.gif"
+        />
+        <img    
+          loading-spinner
+          class="loading-spinner"
+          height="260"
+          width="260"
+          [src]="'assets/images/loading.gif'"
+        />
+          <p>{{ launchDetails.details }}</p>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3">
+      <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" ></mat-grid-tile>
+  </mat-grid-list>
 </ng-container>

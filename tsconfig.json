@@ -18,7 +18,8 @@
       "es2018",
       "dom",
       "esnext.asynciterable"
-    ]
+    ],
+    "skipLibCheck": true
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
