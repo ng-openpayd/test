@@ -25,3 +25,6 @@
 .mat-grid-tile .mat-card {
   margin: 0 10px;
 }
+.mat-card {
+  height: 600px;
+}
